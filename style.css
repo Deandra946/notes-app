@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap");
+
+body {
+  font-family: "Quicksand", sans-serif;
+  margin: 20px;
+  padding: 0;
+  background: linear-gradient(135deg, #dfe4ea, #f1f2f6);
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  color: #2d3436;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+note-form {
+  display: block;
+  width: 100%;
+  max-width: 750px;
+  margin-bottom: 20px;
+}
+
+form {
+  background: linear-gradient(135deg, #f8f9fa, #dfe6e9);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+  margin: auto;
+}
+
+input,
+textarea,
+button {
+  width: calc(100% - 30px);
+  padding: 12px 15px;
+  border: none;
+  border-radius: 8px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1em;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(5px);
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease-in-out;
+  color: #2d3436;
+  outline: none;
+  box-sizing: border-box;
+  display: block;
+  margin: auto;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+  font-style: italic;
+}
+
+input:focus,
+textarea:focus {
+  background: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+  transform: scale(1.02);
+}
+
+button {
+  width: 100%;
+  background: linear-gradient(135deg, #74b9ff, #a29bfe);
+  color: white;
+  font-size: 1.1em;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 3px 3px 8px rgba(108, 92, 231, 0.4);
+}
+
+note-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  width: 90%;
+  max-width: 900px;
+  margin-top: 20px;
+}
+
+note-item {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+  position: relative;
+}
+
+note-item:nth-child(1n) {
+  background: linear-gradient(135deg, #f8f9fa, #dfe6e9);
+}
+
+note-item:nth-child(2n) {
+  background: linear-gradient(135deg, #ecf0f1, #dcdde1);
+}
+
+note-item:nth-child(3n) {
+  background: linear-gradient(135deg, #dfe4ea, #f1f2f6);
+}
+
+note-item:nth-child(4n) {
+  background: linear-gradient(135deg, #bdc3c7, #ecf0f1);
+}
+
+note-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+note-item h3 {
+  margin-top: 0;
+  font-size: 1.5em;
+  color: #2d3436;
+}
+
+note-item p {
+  font-size: 1em;
+  color: #636e72;
+}
+
+note-item small {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.8em;
+  color: #95a5a6;
+}
